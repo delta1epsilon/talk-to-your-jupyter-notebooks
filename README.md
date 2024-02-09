@@ -40,7 +40,7 @@ $ pipenv install
 
 ## Workflow
 
-Run the streamlit app:
+Run the streamlit app
 
 ```
 $ streamlit run talk_to_notebooks_app.py
@@ -67,5 +67,7 @@ Some examples of prompts/results:
 ## Next steps
 
 * Improve chunking, metadata and retrieval 
+* Evaluation
 * Utilize images in RAG
 * Index figures
+
