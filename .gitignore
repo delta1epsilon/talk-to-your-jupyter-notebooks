@@ -5,7 +5,7 @@ __pycache__/
 
 .DS_Store
 
-talk_to_notebooks_app.py
+talk-to-your-notebooks.ipynb
 
 # C extensions
 *.so
