@@ -5,7 +5,7 @@ __pycache__/
 
 .DS_Store
 
-talk-to-your-notebooks.ipynb
+experiment-rag-over-notebooks.ipynb
 
 # C extensions
 *.so
