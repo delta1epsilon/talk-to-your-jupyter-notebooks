@@ -67,7 +67,7 @@ Some examples of prompts/results:
 ## Next steps
 
 * Improve chunking, metadata and retrieval 
-* Evaluation
+* RAG Evaluation
 * Utilize images in RAG
 * Index figures
 
