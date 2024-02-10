@@ -10,8 +10,6 @@ Index Jupyter Notebooks and run RAG using **LLMs locally**:
 
 ### Use Case
 
-**Problem:**
-
 Jupyter Notebooks have become de facto a go-to tool for development in Data Science, Machine Learning, and Data Analytics. It seamlessly integrates code, visualizations, and explanatory text, facilitating efficient exploration, analysis, documentation, and sharing of insights
 
 However, as data science, machine learning, and data analysis projects progress, they often accumulate a large number of notebooks, leading to difficulties in usability, management, and addressing questions or queries, creating what is commonly referred to as a "notebook hell" scenario, as illustrated in the example below:
@@ -20,11 +18,9 @@ However, as data science, machine learning, and data analysis projects progress,
 ![](./assets/notebook-hell.png)
 [*(Image Source)*](https://eugeneyan.com/writing/why-you-need-to-follow-up-after-your-data-science-project/#make-your-work-reproducible-each-run-every-run)
 
-**Alternative Solution:**
+Talk directly to your notebooks with **local retrieval-augmented generation (RAG)**. Index your notebooks and start asking questions. RAG retrieves relevant code and explanations, providing instant answers within your **local environment**. 
 
-Use RAG and local LLMs for Question-Answering over the indexed notebooks which can potentially handle the challenges descibed above. 
-
-Running Large Language Models (LLMs) locally can help avoid sending code or sensitive information to proprietary LLM services by keeping all computations and data processing confined to the local environment. This helps mitigate privacy and security concerns associated with sending sensitive information to third-party services.
+Running Large Language Models (LLMs) locally can help avoid sending code or sensitive information to proprietary LLM services by keeping all computations and data processing confined to the local environment, **ensuring complete privacy and control**.
 
 
 ## Setup
