@@ -27,6 +27,7 @@ def index_notebooks(folder_path):
     docs = load_notebooks_docs(folder_path)
 
     text_splitter = RecursiveCharacterTextSplitter(
+        separators=[' cell: \'['],
         chunk_size=500, chunk_overlap=50, add_start_index=True
     )
     splits = text_splitter.split_documents(docs)
@@ -54,11 +55,11 @@ def get_qa_chain(retriever):
     {context}
     Question: {question}
     Provide answer only if enough context. 
-    Answer should provide a reference to the source document file name.
+    Answer should provide a reference to the source file name.
     """
     prompt = ChatPromptTemplate.from_template(template)
 
-    model = Ollama(model="llama2")
+    model = Ollama(model="llama2", temperature=0.2)
 
     # RAG pipeline
     qa_chain = (
