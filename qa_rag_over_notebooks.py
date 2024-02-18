@@ -1,6 +1,4 @@
-import os 
-
-from langchain_community.document_loaders import NotebookLoader
+from langchain_community.document_loaders import DirectoryLoader, NotebookLoader
 from langchain_community.llms import Ollama
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
@@ -11,17 +9,18 @@ from langchain_core.output_parsers import StrOutputParser
 
 
 def load_notebooks_docs(folder_path):
-    docs = []
-    for file_name in os.listdir(folder_path):
-        if file_name.endswith('.ipynb'):
-            loader = NotebookLoader(
-                path=os.path.join(folder_path, file_name), 
-                include_outputs=True,
-                max_output_length=500,
-                traceback=False
-            )
-            docs.append(loader.load()[0])
-    return docs 
+    loader = DirectoryLoader(
+        folder_path,
+        glob='*.ipynb',
+        loader_cls=NotebookLoader,
+        loader_kwargs={
+            'include_outputs': True, 
+            'max_output_length': 1000
+        },
+        use_multithreading=True
+    )
+    docs = loader.load()
+    return docs
 
 def index_notebooks(folder_path):
     docs = load_notebooks_docs(folder_path)
