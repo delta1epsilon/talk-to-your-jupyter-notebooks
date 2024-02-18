@@ -39,7 +39,7 @@ $ pipenv install
 Run the streamlit app
 
 ```
-$ streamlit run talk_to_notebooks_app.py
+$ make run-notebooks-rag
 ```
 
 Index your Jupyter Notebooks providing the path to folder. 
@@ -62,8 +62,10 @@ Some examples of prompts/results:
 
 ## Next steps
 
-* Improve chunking, metadata and retrieval 
+* Improve chunking, metadata and retrieval
 * RAG Evaluation
 * Utilize images in RAG
 * Index figures
-
+* Embedding on small chunks, retrieve bigger chunks
+* Leverage notebooks metadata
+* Hybrid Search 
